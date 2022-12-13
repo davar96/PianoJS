@@ -6,3 +6,127 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #e3f2fd;
+}
+
+.wrapper {
+  width: 78rem;
+  border-radius: 2rem;
+  padding: 3.5rem 4rem;
+  background: #141414;
+}
+
+.wrapper header {
+  color: #a2a2a2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h2 {
+  font-size: 2rem;
+}
+
+header .column {
+  display: flex;
+  align-items: center;
+}
+
+header .column span {
+  font-weight: 500;
+  margin-right: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.volume-slider input {
+  outline: none;
+  accent-color: #fff;
+}
+
+.keys-checkbox input {
+  width: 6rem;
+  height: 3rem;
+  appearance: none;
+  background: #4b4b4b;
+  border-radius: 3rem;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.keys-checkbox input::before {
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  top: 50%;
+  left: 0.5rem;
+  border-radius: inherit;
+  position: absolute;
+  background: #8c8c8c;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.keys-checkbox input:checked::before {
+  left: 3.5rem;
+  background: #fff;
+}
+
+.piano-keys {
+  display: flex;
+  margin-top: 4rem;
+}
+
+.piano-keys .key {
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  color: #a2a2a2;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.piano-keys .black {
+  width: 4.4rem;
+  height: 14rem;
+  z-index: 2;
+  margin: 0 -2.2rem 0 -2.2rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background: linear-gradient(#333, #000);
+}
+
+.piano-keys .black:active {
+  box-shadow: inset -5px 5px 20px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom, #000, #434343);
+}
+
+.piano-keys .white {
+  width: 7rem;
+  height: 23rem;
+  border-radius: 0.8rem;
+  border: 1px solid #000;
+  background: linear-gradient(#fff 96%, #eee 4%);
+}
+
+.piano-keys .white:active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+
+.piano-keys span {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  font-size: 1.15rem;
+  text-align: center;
+}
