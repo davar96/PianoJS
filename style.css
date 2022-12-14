@@ -135,6 +135,12 @@ header .column span {
   display: none;
 }
 
+footer {
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+}
+
 @media screen and (max-width: 815px) {
   .wrapper {
     padding: 25px;
